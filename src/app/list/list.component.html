@@ -1,0 +1,6 @@
+<div>
+    <div *ngFor="let item of mylist">
+        <p (click)="moveToDetail(item)" style="cursor: pointer;"> {{item.firstName}} {{item.lastName}}</p>
+    </div>
+</div>
+

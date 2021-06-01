@@ -1,0 +1,86 @@
+<h2>Resume Details</h2> <br><br>
+
+<div *ngIf="resu">
+    <div class="dpflex">
+        <div > Name: </div>
+        <div> {{resu.bioData.firstName}} {{resu.bioData.lastName}} </div>
+    </div>
+    <div class="dpflex">
+        <div > Email: </div>
+        <div> {{resu.bioData.email}} </div>
+    </div>
+    <div class="dpflex">
+        <div > Contact: </div>
+        <div>  {{resu.bioData.contact}} </div>
+    </div>
+    <div class="dpflex">
+        <div > Designation: </div>
+        <div>  {{resu.bioData.designation}} </div>
+    </div>
+    
+    
+</div>
+
+<h3>Education</h3> 
+<div *ngFor="let item of resu.education;let i=index">
+   <h5>Education {{i+1}}</h5> 
+   <div class="dpflex">
+        <div> Institute: </div>
+        <div>  {{item.Institute}} </div>
+    </div>
+    <div class="dpflex">
+        <div> Degree: </div>
+        <div>  {{item.Degree}} </div>
+    </div>
+    <div class="dpflex">
+        <div> Passing Percentage: </div>
+        <div>  {{item.PassingPercentage}} </div>
+    </div>
+    <div class="dpflex">
+        <div> Passing Year: </div>
+        <div>  {{item.PassingYear}} </div>
+    </div>
+</div>
+    
+<div>
+<h3>Projects</h3> <br><br>
+<div *ngFor="let item of resu.projects;let i=index">
+    <h5>Project {{i+1}}</h5>
+    <div class="dpflex">
+        <div> Title: </div>
+        <div>  {{item.Title}} </div>
+    </div>
+    <div class="dpflex">
+        <div> Description: </div>
+        <div>  {{item.Description}} </div>
+    </div>
+</div>
+
+<div>
+<h3>Experience</h3> <br><br>
+<div *ngFor="let item of resu.experience;let i=index">
+    <h5>Experience {{i+1}}</h5>
+    <div class="dpflex">
+        <div> Company: </div>
+        <div>  {{item.Company}} </div>
+    </div>
+    <div class="dpflex">
+        <div> Salary: </div>
+        <div>  {{item.Salary}} </div>
+    </div>
+    <div class="dpflex">
+        <div> Years: </div>
+        <div>  {{item.Years}} </div>
+    </div>
+</div>
+    
+<div>
+<h3>Hobbies</h3> <br><br>
+<div *ngFor="let item of resu.hobbies;let i=index">
+    <h5>Hobby {{i+1}}</h5>
+    <div class="dpflex">
+        <div> Name: </div>
+        <div>  {{item.Name}} </div>
+    </div>
+</div>
+    

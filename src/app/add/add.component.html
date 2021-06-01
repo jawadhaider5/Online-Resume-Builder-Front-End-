@@ -1,0 +1,146 @@
+<form [formGroup]="formGroup" style="display: flex;flex-direction: column;width: 17%;" class="example-form">
+    
+        <label>First Name</label>
+        <input  formControlName="firstName" >
+    
+
+    
+        <label>Last Name</label>
+        <input  formControlName="lastName" >
+  
+
+    
+        <label>Email</label>
+        <input matInput formControlName="email" >
+    
+        <label>Contact</label>
+        <input matInput formControlName="contact" >
+
+        <label>Designation</label>
+        <input matInput formControlName="designation" >
+  
+</form>
+
+
+<!-- education -->
+<div style="display: flex;width: 17%;justify-content: space-between;" >
+    <div>
+            <h1>  Education </h1>
+    </div>
+   <div style="margin-top: 20px; margin-left: 40px;">
+        <button   (click)="addEducation()" >Add Education </button>
+   </div>
+</div>
+
+<div *ngFor="let item of education.controls; let i = index">
+<h2> Education {{i+1}} </h2>
+    <form [formGroup]="item" style="display: flex;flex-direction: column;width: 17%;">
+       
+            <label>Institute</label>
+            <input matInput formControlName="Institute" >
+      
+            <label>Degree</label>
+            <input matInput formControlName="Degree" >
+     
+            <label>Passing Percentage</label>
+            <input matInput formControlName="PassingPercentage" >
+      
+            <label>Passing Year</label>
+            <input matInput formControlName="PassingYear" >
+
+            <label>Start Date</label>
+            <input matInput formControlName="StartDate" >
+
+            <label>End Date</label>
+            <input matInput formControlName="EndDate" >
+     
+    </form>
+
+</div>
+
+
+
+<!--experience-->
+
+<div style="display: flex;width: 17%;justify-content: space-between;" >
+    <div>
+      <h1>  Experience </h1>
+    </div>
+    <div style="margin-top: 20px; margin-left: 30px;">
+      <button  (click)="addExperience()" >Add Experience </button>
+    </div>
+  </div>
+
+<div *ngFor="let item of experience.controls; let i = index">
+  <h2> Experience {{i+1}} </h2>
+  <form [formGroup]="item" style="display: flex;flex-direction: column;width: 17%;">
+   
+      <label>Company</label>
+      <input matInput formControlName="Company" >
+    
+      <label>Years</label>
+      <input matInput formControlName="Years" >
+    
+      <label>Salary</label>
+      <input matInput formControlName="Salary" >
+   
+      <label>Start Date</label>
+      <input matInput formControlName="StartDate" >
+  
+
+      <label>End Date</label>
+      <input matInput formControlName="EndDate" >
+    
+  </form>
+
+</div>
+
+
+<div style="display: flex;width: 17%;justify-content: space-between;" >
+    <div>
+      <h1>  Project </h1>
+    </div>
+    <div style="margin-top: 30px; margin-right: 15px;">
+      <button  (click)="addProject()" >Add Project </button>
+    </div>
+  </div>
+
+<div *ngFor="let item of project.controls; let i = index">
+  <h2> Project {{i+1}} </h2>
+  <form [formGroup]="item" style="display: flex;flex-direction: column;width: 17%;">
+    
+      <label>Title</label>
+      <input matInput formControlName="Title" >
+    
+      <label>Description</label>
+      <input matInput formControlName="Description" >
+   
+  </form>
+
+</div>
+
+<div style="display: flex;width: 17%;justify-content: space-between;" >
+    <div>
+      <h1>  Hobby </h1>
+    </div>
+    <div style="margin-top: 30px; margin-right: 20px;">
+      <button  mat-raised-button (click)="addHobby()" >Add Hobby </button>
+    </div>
+  </div>
+  
+
+<div *ngFor="let item of hobbies.controls; let i = index">
+  <h2> Hobbies {{i+1}} </h2>
+  <form [formGroup]="item" style="display: flex;flex-direction: column;width: 17%;">
+    
+      <label>Name</label>
+      <input matInput formControlName="Name" >
+    
+  </form>
+
+</div>
+
+
+<div class="sign-in-container">
+    <button (click)="final(formGroup)" class="sign-in-button"  mat-raised-button>Submit</button>
+</div>
